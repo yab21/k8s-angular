@@ -51,7 +51,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
-          context: .
+          context: src/
           push: true
           tags: ${{ env.IMAGE_NAME }}:${{ env.TAG }},${{ env.IMAGE_NAME }}:${{ env.ENV }},${{ env.IMAGE_NAME }}:latest
           cache-from: type=gha
